@@ -10,7 +10,28 @@
 
 ## 截图
 
-iPhone Duo（合上时的外屏，系统栏竖排在右侧）。截图里的内容是演示数据。
+截图里的内容都是演示数据。
+
+### iPhone 17
+
+<p>
+  <img src="screenshots/iphone17-home.jpg" width="180" alt="首页">
+  <img src="screenshots/iphone17-discover.jpg" width="180" alt="发现">
+  <img src="screenshots/iphone17-video.jpg" width="180" alt="影视详情">
+  <img src="screenshots/iphone17-me.jpg" width="180" alt="我的">
+</p>
+
+### iPhone 17 Pro Max
+
+<p>
+  <img src="screenshots/iphone17promax-article.jpg" width="180" alt="图文详情">
+  <img src="screenshots/iphone17promax-episodes.jpg" width="180" alt="影视合集与下载">
+  <img src="screenshots/iphone17promax-favorites.jpg" width="180" alt="收藏">
+</p>
+
+### iPhone Duo
+
+合上时的外屏，系统栏竖排在右侧。
 
 <p>
   <img src="screenshots/duo-home.jpg" width="180" alt="首页">
