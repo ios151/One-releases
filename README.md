@@ -5,8 +5,10 @@
 ## 下载与安装
 
 1. 打开 [Releases](https://github.com/ios151/One-releases/releases/latest)，下载最新的 `One-unsigned.ipa`
-2. 安装包是**未签名**的，不能直接装：用自己的证书，或者 SideStore / AltStore 这类工具自签后安装
-3. 装好之后 App 会每天自动检查一次新版本，有新版会在输入口令后提示，点「去下载」回到这里下载新的安装包重新安装即可
+2. 安装包是**未签名**的，不能直接装：**推荐用 [LCSign](https://www.sign.lc) 签名安装**；也可以用自己的证书，或者 SideStore / AltStore 这类工具自签
+3. 装好之后 App 会每天自动检查一次新版本，有新版会在输入口令后提示：
+   - 装了 LCSign 的（1.6.5 起）：点「用 LCSign 更新」，新版安装包会直接导入 LCSign，签名安装即可
+   - 没装 LCSign 的：点「去下载」回到这里，下载新的安装包重新安装
 
 ## 截图
 
