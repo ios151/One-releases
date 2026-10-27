@@ -1,0 +1,134 @@
+{
+  "name": "One",
+  "identifier": "com.ios151.one.source",
+  "sourceURL": "https://raw.githubusercontent.com/ios151/One-releases/main/altsource.json",
+  "subtitle": "One 原生 iOS 客户端的订阅源",
+  "description": "One（ONE·一个 的第三方原生 iOS 客户端）的订阅源：添加后可以在 SideStore / AltStore 里安装和更新。安装包是未签名的，由商店用你自己的 Apple ID 签名。",
+  "iconURL": "https://raw.githubusercontent.com/ios151/One-releases/main/icon.png",
+  "website": "https://ios151.github.io/One-releases/",
+  "tintColor": "#007AFF",
+  "nsfw": false,
+  "featuredApps": [
+    "com.ios151.one"
+  ],
+  "apps": [
+    {
+      "name": "One",
+      "bundleIdentifier": "com.ios151.one",
+      "developerName": "ios151",
+      "subtitle": "ONE·一个 原生 iOS 客户端",
+      "localizedDescription": "One 是 ONE·一个 的第三方原生 iOS 客户端（SwiftUI，iOS 16+，iPhone / iPad 通用，适配 iPhone Duo）。图文、影视点播、阅读、电台、写真、漫画，系统原生播放器（画中画、AirPlay）和外部播放器，分片多连接并发下载（文件在「文件」App 里），收藏、搜索、评论。安装包是未签名的，由商店用你自己的 Apple ID 签名。",
+      "iconURL": "https://raw.githubusercontent.com/ios151/One-releases/main/icon.png",
+      "tintColor": "#007AFF",
+      "category": "entertainment",
+      "versions": [
+        {
+          "version": "1.6.5",
+          "buildVersion": "14",
+          "date": "2026-10-24T10:17:55Z",
+          "localizedDescription": "• 新增：用 LCSign 签名的，以后有新版本时，更新提示里会多一个「用 LCSign 更新」，点一下新版安装包就直接导入 LCSign，签名安装即可；没装 LCSign 还是原来的「去下载」",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.5-14/One-unsigned.ipa",
+          "size": 1530271,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.6.4",
+          "buildVersion": "13",
+          "date": "2026-10-24T09:46:53Z",
+          "localizedDescription": "• 新增：看图时往下一滑就能关闭，和系统相册一样（评论区的图片、写真、点开的大图都可以），不用再点左上角\n• 优化：放大后拖动更顺滑、松手有惯性；双指缩放跟着手指走；双击放大到点的位置，再双击还原；放大后拖到左右边缘再往外拖，可以直接翻到上一张 / 下一张",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.4-13/One-unsigned.ipa",
+          "size": 1524656,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.6.3",
+          "buildVersion": "12",
+          "date": "2026-10-24T05:22:13Z",
+          "localizedDescription": "• 修复：iOS 17 等旧系统上，从「我的」里的设置页返回后，底部导航栏变成全透明的问题（iOS 26 及以上不受影响）",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.3-12/One-unsigned.ipa",
+          "size": 1517116,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.6.2",
+          "buildVersion": "11",
+          "date": "2026-10-24T04:47:07Z",
+          "localizedDescription": "• 修复：图文详情里点收藏，会打开封面大图的问题\n• 同一类问题一起修好：图片旁边的按钮点不准、长按标题会弹出图片菜单",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.2-11/One-unsigned.ipa",
+          "size": 1517270,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.6.1",
+          "buildVersion": "10",
+          "date": "2026-10-23T20:21:29Z",
+          "localizedDescription": "• 新增评论区：影视、图文、阅读、写真、漫画、电台的详情页最下面都能看评论（最热的 3 条），点「查看全部」打开评论弹层——可以切换最热 / 最新、展开楼中楼回复、点开评论里的图；首页主卡下面的评论数点一下也能看\n• 长按一条评论可以复制，或者屏蔽这个人（只存在本机，评论弹层左上角可以清空屏蔽名单）\n• 评论目前只能看，暂时不能发评论、点赞",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.1-10/One-unsigned.ipa",
+          "size": 1517517,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.6.0",
+          "buildVersion": "9",
+          "date": "2026-10-23T19:19:01Z",
+          "localizedDescription": "• 阅读文章显示完整正文，插图穿插在段落之间（以前只显示开头一句）；收藏页顶部那一大块空白修好了\n• 图片加载更稳：只用能正常显示的图片线路，一条不行自动换下一条，不会再显示成坏图\n• 播放出错时告诉你怎么办：连不上时提示「换线路」或者切换网络 / 代理节点后「重试」，没网、格式打不开也各有说明，带错误码方便反馈\n• 电台迷你播放条：离开电台页面后，底部也能暂停 / 继续 / 关掉\n• iPad 和 iPhone Duo：首页大图和推文并排，影视详情横着拿时播放器在左、简介在右（转屏、折叠展开不中断播放），点播 / 发现多列显示，Tab 栏可以收成侧边栏；iPhone Duo 半折时内容按折痕分开\n• 细节：iOS 26 起的液态玻璃按钮和 Tab 栏（往下滚自动收起）；系统字号调大后排版不再挤坏；小按钮更好点；开了「增强对比度」时深色页面的文字更清楚",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.0-9/One-unsigned.ipa",
+          "size": 1442507,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.5.0",
+          "buildVersion": "8",
+          "date": "2026-10-23T05:42:26Z",
+          "localizedDescription": "• 首页改成官网首页的样子：每天一页，只显示当天那一篇图文——大图、署名和推文，下面是评论 / 收藏 / 点赞数和期号；左右滑动换日期，点日期打开日历，点卡片进详情，长按大图可以保存\n• 首页不再列当天的其它内容（到「发现」「点播」里看），右上角也不再有「大图卡片 / 紧凑列表」切换；点播、发现的切换不变",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.5.0-8/One-unsigned.ipa",
+          "size": 1301282,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.4.2",
+          "buildVersion": "7",
+          "date": "2026-10-23T04:41:38Z",
+          "localizedDescription": "• 修复 iPad 上横着拿时 App 显示成歪的竖屏：现在 iPhone / iPad 通用，iPad 横屏、竖屏都能正常使用\n• iPad 等宽屏上，「我的」页、影视详情页、已下载内容的播放页不再把内容拉到屏幕两边",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.4.2-7/One-unsigned.ipa",
+          "size": 1287524,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.4.1",
+          "buildVersion": "6",
+          "date": "2026-10-23T04:13:42Z",
+          "localizedDescription": "• 「我的关注」挪到了「收藏」页最上面：点进去能按名字搜索关注的演员，左滑可以取消关注\n• 首页、点播、发现的右上角都有排版按钮，点一下在「大图卡片」和「紧凑列表」之间切换（各页各记各的）；首页「左右滑动换日期」的开关挪进了日历菜单",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.4.1-6/One-unsigned.ipa",
+          "size": 1237080,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.4.0",
+          "buildVersion": "5",
+          "date": "2026-10-23T03:34:36Z",
+          "localizedDescription": "• 首页：左右滑动切换不同日期的内容（往左滑是更早的一天）；日历图标里可以选日期、回到最新，也能关掉左右滑动改成单页\n• 演员：「发现 → 演员」可以按名字搜索；演员主页显示作品总数，可以「关注」，作品支持单列 / 双列切换\n• 影视详情页：多了演员和标签芯片，点演员进演员主页，点标签按名字搜索；标题下面显示观看 / 收藏 / 评论数\n• 直播：「发现」页最上面多了「ONE 直播」入口（在浏览器里打开直播站）；点播分类里的「ONE直播」录播合集也放回来了\n• 播放：详情页提前把播放地址准备好，恢复上次进度更快起播；「我的 → 播放器」里新增「显示起播耗时」和「快速起播（实验）」\n• 细节：图标按钮补了 VoiceOver 标签；系统开了「降低透明度」「减弱动态效果」时更友好；下载进度和速度的数字会滚动；点播分类多的时候改成下拉菜单",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.4.0-5/One-unsigned.ipa",
+          "size": 1225895,
+          "minOSVersion": "16.0"
+        },
+        {
+          "version": "1.3.0",
+          "buildVersion": "4",
+          "date": "2026-10-23T00:18:33Z",
+          "localizedDescription": "• 已下载的内容，在「我的 → 下载」里点一下就能直接播放，不用联网，也不用去「文件」App 里翻；视频的字幕会跟着下载一起存下来，离线也有字幕\n• 自动检查更新：每天检查一次，有新版本会提示你去下载；也可以在「我的 → 检查更新」里手动检查\n• 公告：有公告时，输完口令后弹一次（每天最多一次）",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.3.0-4/One-unsigned.ipa",
+          "size": 1152058,
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "用于把图片和视频保存到相册"
+        }
+      }
+    }
+  ],
+  "news": []
+}

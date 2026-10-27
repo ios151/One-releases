@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<title>One · 安装</title>
+<meta name="description" content="One（ONE·一个）原生 iOS 客户端：用 LCSign 导入安装包，或添加订阅源到 SideStore / AltStore 等，之后在商店里安装和更新。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="One · ONE·一个 原生 iOS 客户端">
+<meta property="og:description" content="未签名 IPA：LCSign 一键导入，或添加订阅源到 SideStore / AltStore，之后在商店里安装和更新。">
+<meta property="og:image" content="https://ios151.github.io/One-releases/icon.png">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  :root { --bg: #000000; --card: rgba(255, 255, 255, 0.06); --line: rgba(255, 255, 255, 0.12); --text: #f4f1ec; --muted: rgba(244, 241, 236, 0.62); --accent: #0a84ff; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif; }
+  main { max-width: 520px; margin: 0 auto; padding: calc(env(safe-area-inset-top) + 36px) 20px calc(env(safe-area-inset-bottom) + 40px); }
+  header { text-align: center; }
+  .icon { width: 112px; height: 112px; border-radius: 22.37%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+  h1 { margin: 18px 0 2px; font-size: 30px; letter-spacing: 3px; font-weight: 800; }
+  h1 span { color: var(--accent); }
+  .tag { margin: 0; color: var(--muted); }
+  .version { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+  h2 { margin: 34px 0 10px; font-size: 15px; font-weight: 700; color: var(--muted); }
+  h3 { margin: 18px 0 8px; font-size: 14px; font-weight: 600; }
+  .btn { display: block; width: 100%; padding: 14px 16px; margin: 0 0 10px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); color: var(--text); font: inherit; font-weight: 600; text-align: center; text-decoration: none; cursor: pointer; }
+  .btn.primary { background: var(--text); color: #111114; border-color: transparent; }
+  .badge { display: inline-block; line-height: 0; }
+  .badge img { width: 200px; height: auto; }
+  .url { margin: 8px 0 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; color: var(--muted); }
+  p, li { color: var(--muted); font-size: 14px; }
+  ol { margin: 6px 0 0; padding-left: 20px; }
+  details { margin-top: 16px; }
+  summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+  .history { margin: 8px 0 0; padding: 0; list-style: none; }
+  .history li { margin: 0 0 12px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+  .history b { color: var(--text); }
+  .history span { display: block; margin-top: 4px; white-space: pre-line; }
+  footer { margin-top: 36px; text-align: center; font-size: 13px; color: var(--muted); }
+  footer a, p a { color: var(--text); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="icon" src="icon.png" alt="One" width="112" height="112">
+    <h1>One</h1>
+    <p class="tag">ONE·一个 的第三方原生 iOS 客户端</p>
+    <p class="version" id="version">iOS 16+ · iPhone / iPad · 未签名 IPA</p>
+  </header>
+
+  <h2>安装</h2>
+  <a class="btn primary" id="lcsign" href="loadcontroller://import?url=https://github.com/ios151/One-releases/releases/latest/download/One-unsigned.ipa&amp;name=One.ipa">用 LCSign 导入</a>
+  <a class="btn" id="ipa" href="https://github.com/ios151/One-releases/releases/latest">下载 IPA（自己签名）</a>
+  <p>安装包是未签名的，需要自签：推荐 <a href="https://www.sign.lc">LCSign</a>，也可以用 SideStore / 自己的证书。点「用 LCSign 导入」前请先装好 LCSign。</p>
+
+  <h2>iOS 其他安装方式</h2>
+  <h3>正式版</h3>
+  <a class="badge" href="https://altdirect.app/?url=https://raw.githubusercontent.com/ios151/One-releases/main/altsource.json" aria-label="Add AltSource">
+    <img src="https://github.com/StikStore/altdirect/raw/main/assets/png/AltSource_Blue.png?raw=true" alt="Add AltSource">
+  </a>
+  <p>点开后选你用的商店（AltStore / SideStore / Feather / LiveContainer 等），添加订阅源。之后在商店里就能安装 One，有新版时商店里会显示「更新」。</p>
+  <div class="url" id="source-url">https://raw.githubusercontent.com/ios151/One-releases/main/altsource.json</div>
+  <button class="btn" id="copy" type="button">复制订阅地址</button>
+
+  <details>
+    <summary>版本记录</summary>
+    <ul class="history" id="history"><li>读取中…</li></ul>
+  </details>
+
+  <footer>
+    <p>安装中遇到问题：<a href="https://t.me/ios151">@ios151</a> · 频道 <a href="https://t.me/Jsforbaby">@Jsforbaby</a></p>
+    <p><a href="https://github.com/ios151/One-releases/releases">全部版本</a> · 本页只提供安装包，不含源码</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var SOURCE = "https://raw.githubusercontent.com/ios151/One-releases/main/altsource.json";
+  function byId(id) { return document.getElementById(id); }
+
+  byId("copy").addEventListener("click", function () {
+    var button = this;
+    function done(ok) {
+      button.textContent = ok ? "已复制" : "复制失败，请长按上面的地址手动复制";
+      setTimeout(function () { button.textContent = "复制订阅地址"; }, 2200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(SOURCE).then(function () { done(true); }, function () { done(false); });
+      return;
+    }
+    var area = document.createElement("textarea");
+    area.value = SOURCE;
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (error) { ok = false; }
+    document.body.removeChild(area);
+    done(ok);
+  });
+
+  // 版本信息和下载地址：优先直接读 GitHub 的 Releases（发布完一分钟内就是最新的，不用等订阅源更新、也不用等 Pages 重新部署），
+  // 读不到（限流 / 网络）就退回读订阅源 altsource.json（和商店里看到的是同一份），再读不到就保持页面里写死的「最新版」链接。
+  // 从 Release 里取版本的规则要和 scripts/update-altsource.mjs 保持一致：tag 形如 v1.0.0-2、附件 One-unsigned.ipa，草稿 / 预发布不算
+  var RELEASES_API = "https://api.github.com/repos/ios151/One-releases/releases?per_page=12";
+
+  function versionsFromReleases(releases) {
+    var out = [];
+    releases.forEach(function (release) {
+      if (release.draft || release.prerelease) return;
+      var match = /^v(\d+(?:\.\d+)*)-(\d+)$/.exec(release.tag_name || "");
+      var asset = (release.assets || []).filter(function (item) { return item.name === "One-unsigned.ipa" && item.state === "uploaded"; })[0];
+      if (!match || !asset) return;
+      var notes = String(release.body || "").split(/\r?\n/)
+        .filter(function (line) { return /^\s*[-*]\s+/.test(line); })
+        .map(function (line) { return "• " + line.replace(/^\s*[-*]\s+/, "").trim(); })
+        .join("\n");
+      out.push({ version: match[1], buildVersion: match[2], date: release.published_at || release.created_at, localizedDescription: notes, downloadURL: asset.browser_download_url, size: asset.size, minOSVersion: "16.0" });
+    });
+    out.sort(function (a, b) { return Date.parse(b.date) - Date.parse(a.date); });
+    return out;
+  }
+
+  function loadVersions() {
+    return fetch(RELEASES_API, { cache: "no-store" })
+      .then(function (response) { if (!response.ok) throw new Error("api " + response.status); return response.json(); })
+      .then(function (releases) {
+        var versions = versionsFromReleases(releases);
+        if (!versions.length) throw new Error("no releases");
+        return { source: "releases", versions: versions };
+      })
+      .catch(function () {
+        return fetch("altsource.json", { cache: "no-store" })
+          .then(function (response) { return response.json(); })
+          .then(function (json) { return { source: "altsource", versions: json.apps[0].versions }; });
+      });
+  }
+
+  loadVersions()
+    .then(function (result) {
+      var versions = result.versions;
+      var latest = versions[0];
+      var mb = (latest.size / 1048576).toFixed(1);
+      var line = byId("version");
+      line.dataset.source = result.source;
+      line.textContent = "最新版 " + latest.version + "（build " + latest.buildVersion + "）· " + mb + " MB · " + String(latest.date).slice(0, 10) + " · iOS " + (latest.minOSVersion || "16.0") + "+";
+      byId("lcsign").href = "loadcontroller://import?url=" + latest.downloadURL + "&name=One-" + latest.version + "-" + latest.buildVersion + ".ipa";
+      byId("ipa").href = latest.downloadURL;
+      var list = byId("history");
+      list.textContent = "";
+      versions.slice(0, 8).forEach(function (item) {
+        var row = document.createElement("li");
+        var title = document.createElement("b");
+        title.textContent = item.version + "（build " + item.buildVersion + "）· " + String(item.date).slice(0, 10);
+        row.appendChild(title);
+        if (item.localizedDescription) {
+          var notes = document.createElement("span");
+          notes.textContent = item.localizedDescription;
+          row.appendChild(notes);
+        }
+        list.appendChild(row);
+      });
+    })
+    .catch(function () {
+      byId("history").textContent = "";
+      var row = document.createElement("li");
+      row.textContent = "没读到版本记录，请看「全部版本」。";
+      byId("history").appendChild(row);
+    });
+})();
+</script>
+</body>
+</html>

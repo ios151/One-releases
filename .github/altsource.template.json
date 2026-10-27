@@ -1,0 +1,32 @@
+{
+  "name": "One",
+  "identifier": "com.ios151.one.source",
+  "sourceURL": "https://raw.githubusercontent.com/ios151/One-releases/main/altsource.json",
+  "subtitle": "One 原生 iOS 客户端的订阅源",
+  "description": "One（ONE·一个 的第三方原生 iOS 客户端）的订阅源：添加后可以在 SideStore / AltStore 里安装和更新。安装包是未签名的，由商店用你自己的 Apple ID 签名。",
+  "iconURL": "https://raw.githubusercontent.com/ios151/One-releases/main/icon.png",
+  "website": "https://ios151.github.io/One-releases/",
+  "tintColor": "#007AFF",
+  "nsfw": false,
+  "featuredApps": ["com.ios151.one"],
+  "apps": [
+    {
+      "name": "One",
+      "bundleIdentifier": "com.ios151.one",
+      "developerName": "ios151",
+      "subtitle": "ONE·一个 原生 iOS 客户端",
+      "localizedDescription": "One 是 ONE·一个 的第三方原生 iOS 客户端（SwiftUI，iOS 16+，iPhone / iPad 通用，适配 iPhone Duo）。图文、影视点播、阅读、电台、写真、漫画，系统原生播放器（画中画、AirPlay）和外部播放器，分片多连接并发下载（文件在「文件」App 里），收藏、搜索、评论。安装包是未签名的，由商店用你自己的 Apple ID 签名。",
+      "iconURL": "https://raw.githubusercontent.com/ios151/One-releases/main/icon.png",
+      "tintColor": "#007AFF",
+      "category": "entertainment",
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "用于把图片和视频保存到相册"
+        }
+      }
+    }
+  ],
+  "news": []
+}

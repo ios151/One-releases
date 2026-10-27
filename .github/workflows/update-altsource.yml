@@ -1,0 +1,44 @@
+name: 更新订阅源
+
+# Release 发布 / 编辑 / 删除之后，按 Releases 重新生成订阅源 altsource.json 并提交（见 .github/scripts/update-altsource.mjs）。
+# 也可以在 Actions 页手动点「Run workflow」跑一遍（幂等：没变化就不提交）。
+on:
+  release:
+    types: [published, edited, deleted]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 同一时间只跑一个：连发几个 Release 时按顺序来，别互相抢着推送
+concurrency:
+  group: update-altsource
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: 生成订阅源
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/update-altsource.mjs
+      - name: 有变化就提交
+        run: |
+          # 用 status 而不是 diff：altsource.json 还没被跟踪的话（第一次），diff 看不到它
+          if [ -z "$(git status --porcelain -- altsource.json)" ]; then
+            echo "altsource.json 没变化，不提交"
+            exit 0
+          fi
+          git config user.name "ios151"
+          git config user.email "338882408+ios151@users.noreply.github.com"
+          git add altsource.json
+          git commit -m "chore: 订阅源更新（按 Releases 重新生成）"
+          git pull --rebase origin main
+          git push origin HEAD:main
