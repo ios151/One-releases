@@ -23,6 +23,15 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "1.6.7",
+          "buildVersion": "16",
+          "date": "2026-10-28T13:46:34Z",
+          "localizedDescription": "• 新增：收藏多了一个开关（「我的 → 收藏」）：关闭后，点一下心形直接收进默认收藏夹，再点一下取消收藏，不用每次都点两下；想放进别的收藏夹，长按心形。打开时和以前一样，点心形弹出收藏夹列表\n• 优化：各页底部的说明文字重新整理，一句一行，更简单明了",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.7-16/One-unsigned.ipa",
+          "size": 1532862,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "1.6.6",
           "buildVersion": "15",
           "date": "2026-10-28T06:14:36Z",
