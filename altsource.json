@@ -23,6 +23,15 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "1.6.6",
+          "buildVersion": "15",
+          "date": "2026-10-28T06:14:36Z",
+          "localizedDescription": "• 修复：页面显示「Expired token」时，提示改成了怎么处理：到「我的 → 账号」点「换一个新账号」，然后重试",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.6-15/One-unsigned.ipa",
+          "size": 1530695,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "1.6.5",
           "buildVersion": "14",
           "date": "2026-10-24T10:17:55Z",
