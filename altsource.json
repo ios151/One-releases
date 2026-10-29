@@ -23,6 +23,15 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "1.6.10",
+          "buildVersion": "20",
+          "date": "2026-10-29T07:58:34Z",
+          "localizedDescription": "• 修复：看图页左右翻页时粘手、划到一半卡住、划了没反应；往下滑关闭只在明显竖着拖的时候才接，不再抢横划\n• 说明：图片还在加载或加载失败时，也能往下滑关闭；双指缩放、放大后拖动、双击放大、保存图片都和以前一样",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.10-20/One-unsigned.ipa",
+          "size": 1653494,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "1.6.9",
           "buildVersion": "19",
           "date": "2026-10-29T05:40:29Z",
