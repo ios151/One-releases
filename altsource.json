@@ -23,6 +23,15 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "1.6.9",
+          "buildVersion": "19",
+          "date": "2026-10-29T05:40:29Z",
+          "localizedDescription": "• 新增：备份与恢复——「我的 → 备份与恢复」里填一次 WebDAV（坚果云免费版就行）的服务器地址、账号、应用密码，就能一键把收藏、收藏夹、关注的演员、播放进度备份到云端；换证书重装之后再填一次，点「从云端恢复」，东西就都回来了\n• 说明：恢复只补上手机上没有的，已有的不会被覆盖；刚重装、手机上是空的时候点备份会被拦住，不会把云端的备份冲掉\n• 说明：账号密码只存在这台手机上，不会进备份文件；不用 WebDAV 的话，也可以导出成文件自己存，恢复时粘贴文件的链接",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.6.9-19/One-unsigned.ipa",
+          "size": 1654669,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "1.6.8",
           "buildVersion": "18",
           "date": "2026-10-29T00:43:04Z",
