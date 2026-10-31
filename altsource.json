@@ -23,6 +23,15 @@
       "category": "entertainment",
       "versions": [
         {
+          "version": "1.7.0",
+          "buildVersion": "21",
+          "date": "2026-10-31T12:36:53Z",
+          "localizedDescription": "• 新增：写真、阅读、图文、电台的详情页往下滚出一小段，右下角会浮出「回到顶部」小圆钮，点一下回到最上面\n• 新增：详情页最下面（评论上面）多了「收藏」和「回到顶部」两个按钮，看完不用再滑回去点收藏",
+          "downloadURL": "https://github.com/ios151/One-releases/releases/download/v1.7.0-21/One-unsigned.ipa",
+          "size": 1668131,
+          "minOSVersion": "16.0"
+        },
+        {
           "version": "1.6.10",
           "buildVersion": "20",
           "date": "2026-10-29T07:58:34Z",
